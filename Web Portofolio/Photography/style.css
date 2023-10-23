@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500&subset=latin-ext");
+
+body {
+  padding: 100px;
+  background-image: linear-gradient(-20deg, hwb(150 16% 0%) 0, #4447ff 100%);
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  margin-left: -45px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.main {
+  width: 1000px;
+  height: 900px;
+  max-width: 1000px;
+  background-color: #fafafa;
+  margin: auto;
+  padding-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  font-weight: bold;
+  color: #44caff;
+}
+
+.menu {
+  background-color: teal;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 999;
+}
+
+.menu.hide {
+  top: -60px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px; /* Menambahkan padding ke kanan */
+}
+
+li {
+  margin: 0 10px;
+}
+
+.menu-list {
+  display: none; /* Sembunyikan menu-list secara default */
+  position: absolute;
+  top: 50px; /* Atur posisi menu-list di bawah menu-icon */
+  right: 0;
+  background-color: teal;
+  z-index: 2;
+  flex-direction: column; /* Menampilkan menu-list secara vertikal */
+  align-items: flex-end; /* Memposisikan item menu di kanan */
+  padding: 10px; /* Padding untuk memberikan ruang di sekitar item menu */
+}
+
+
+.menu.active .menu-list {
+  display: block; /* Tampilkan menu-list ketika menu memiliki kelas active */
+}
+
+
+.menu-icon {
+  width: 25px;
+  float: right;
+  margin-right: 20px;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.social-links {
+  padding-top: 20px;
+}
+
+
+.form-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #44caff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #28ff94;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+.social-links {
+  display: flex; /* Menggunakan flexbox untuk mengatur elemen secara horizontal */
+  justify-content: center; /* Mengatur konten agar berada di tengah secara horizontal */
+  padding-top: 20px;
+}
+
+
+@media (min-width: 701px) {
+  .menu-icon {
+    display: none; /* Sembunyikan menu-icon pada mode desktop */
+  }
+
+  .menu-list {
+    display: block; /* Tampilkan menu-list pada mode desktop */
+    position: relative;
+    top: auto;
+    right: auto;
+    background-color: transparent;
+    z-index: 1;
+    flex-direction: row; /* Menampilkan menu-list secara horizontal */
+    align-items: center; /* Posisikan item menu ke tengah */
+    padding: 0; /* Hapus padding untuk item menu */
+  }
+}
+@media (max-width: 500px) {
+  .div-main {
+    max-width: 90%; /* Lebar maksimum pada mode perangkat seluler */
+  }
+  .menu-list {
+    display: none; /* Sembunyikan menu list */
+  }
+
+  .menu-icon {
+    display: block; /* Tampilkan menu icon */
+  }
+
+  .menu {
+    padding: 10px 0; /* Ubah padding agar lebih kompak */
+  }
+
+  .menu.hide {
+    top: 0; /* Atur kembali top untuk tampilan ke atas */
+  }
+
+  /* Atur tampilan untuk menu dropdown */
+  .menu.active {
+    background-color: teal;
+    text-align: left;
+  }
+
+  .menu.active .menu-list {
+    display: block;
+  }
+  
+}
+
